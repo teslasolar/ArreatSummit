@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://arreatsummit.com/schemas/udt/layer1/stat.schema.json",
+  "title": "Stat UDT",
+  "description": "Item/skill stat modification",
+  "type": "object",
+  "required": ["text", "type", "stat", "value"],
+  "properties": {
+    "text": {
+      "type": "string",
+      "description": "Display text (e.g., '+20% IAS')"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["flat", "pct", "aura", "skill", "proc"],
+      "description": "Stat type"
+    },
+    "stat": {
+      "type": "string",
+      "description": "Stat ID (e.g., 'ias', 'fcr', 'res_fire')"
+    },
+    "value": {
+      "oneOf": [
+        { "type": "number" },
+        { "$ref": "range.schema.json" }
+      ],
+      "description": "Stat value or range"
+    },
+    "condition": {
+      "type": ["string", "null"],
+      "description": "Conditional (e.g., 'when struck')"
+    }
+  }
+}

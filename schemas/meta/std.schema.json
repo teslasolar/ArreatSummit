@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://arreatsummit.com/schemas/meta/std.schema.json",
+  "title": "STD - Standard Wrapper",
+  "description": "Standard wrapper for all D2R data structures",
+  "type": "object",
+  "required": ["id", "scope"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^D2R-[A-Z]+$",
+      "description": "Standard ID (e.g., D2R-ITEMS, D2R-SKILLS)"
+    },
+    "scope": {
+      "type": "string",
+      "description": "What this standard covers"
+    },
+    "udt": {
+      "type": "array",
+      "description": "User Defined Types",
+      "items": { "$ref": "udt.schema.json" }
+    },
+    "hierarchy": {
+      "type": "array",
+      "description": "Tier levels if applicable"
+    },
+    "entities": {
+      "type": "array",
+      "description": "Entity instances",
+      "items": { "$ref": "entity.schema.json" }
+    },
+    "relations": {
+      "type": "array",
+      "description": "How entities connect"
+    },
+    "patches": {
+      "type": "array",
+      "description": "Version history",
+      "items": { "$ref": "patch.schema.json" }
+    },
+    "crosswalk": {
+      "type": "object",
+      "description": "Mappings between entities"
+    }
+  }
+}

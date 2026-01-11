@@ -1,0 +1,60 @@
+{
+  "$schema": "https://arreatsummit.com/schemas/composite/runeword-full.schema.json",
+  "meta": {
+    "type": "ENTITY",
+    "udt": "Runeword",
+    "id": "spirit",
+    "patch": "2.4",
+    "created": "2021-09-23",
+    "updated": "2022-04-28"
+  },
+  "data": {
+    "name": "Spirit",
+    "slug": "spirit",
+    "runes": ["Tal", "Thul", "Ort", "Amn"],
+    "sockets": 4,
+    "types": ["Swords", "Shields"],
+    "req": {
+      "level": 25
+    },
+    "stats": [
+      {
+        "text": "+2 To All Skills",
+        "type": "skill",
+        "stat": "all-skills",
+        "value": 2,
+        "condition": null
+      },
+      {
+        "text": "Faster Cast Rate",
+        "type": "pct",
+        "stat": "fcr",
+        "value": { "min": 25, "max": 35, "varies": true },
+        "condition": null
+      },
+      {
+        "text": "Faster Hit Recovery",
+        "type": "pct",
+        "stat": "fhr",
+        "value": { "min": 55, "max": 55, "varies": false },
+        "condition": null
+      },
+      {
+        "text": "Adds to Mana",
+        "type": "flat",
+        "stat": "mana",
+        "value": { "min": 89, "max": 112, "varies": true },
+        "condition": null
+      },
+      {
+        "text": "To Vitality",
+        "type": "flat",
+        "stat": "vitality",
+        "value": { "min": 3, "max": 8, "varies": true },
+        "condition": null
+      }
+    ],
+    "ladder": false,
+    "notes": "One of the most popular runewords for casters"
+  }
+}

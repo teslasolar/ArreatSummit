@@ -1,0 +1,67 @@
+{
+  "$schema": "https://arreatsummit.com/schemas/composite/unique-full.schema.json",
+  "meta": {
+    "type": "ENTITY",
+    "udt": "Unique",
+    "id": "shako",
+    "patch": "2.4",
+    "created": "2021-09-23",
+    "updated": "2023-05-02"
+  },
+  "data": {
+    "name": "Harlequin Crest",
+    "slug": "shako",
+    "base": "Shako",
+    "tc": 78,
+    "qlvl": 62,
+    "req": {
+      "level": 62,
+      "str": 50
+    },
+    "stats": [
+      {
+        "text": "+2 To All Skills",
+        "type": "skill",
+        "stat": "all-skills",
+        "value": 2,
+        "condition": null
+      },
+      {
+        "text": "To Life",
+        "type": "flat",
+        "stat": "life",
+        "value": { "min": 100, "max": 150, "varies": true },
+        "condition": null
+      },
+      {
+        "text": "To Mana",
+        "type": "flat",
+        "stat": "mana",
+        "value": { "min": 100, "max": 150, "varies": true },
+        "condition": null
+      },
+      {
+        "text": "Damage Reduced By 10%",
+        "type": "pct",
+        "stat": "dr",
+        "value": 10,
+        "condition": null
+      },
+      {
+        "text": "Better Chance of Getting Magic Items",
+        "type": "pct",
+        "stat": "mf",
+        "value": 50,
+        "condition": null
+      },
+      {
+        "text": "To All Attributes",
+        "type": "flat",
+        "stat": "all-attributes",
+        "value": 2,
+        "condition": null
+      }
+    ],
+    "sockets": null
+  }
+}

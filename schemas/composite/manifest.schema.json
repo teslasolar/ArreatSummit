@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://arreatsummit.com/schemas/composite/manifest.schema.json",
+  "title": "Collection Manifest",
+  "description": "Manifest listing all entities in a collection",
+  "type": "object",
+  "required": ["meta", "entries"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["type", "collection"],
+      "properties": {
+        "type": {
+          "const": "MANIFEST"
+        },
+        "collection": {
+          "type": "string",
+          "description": "Collection name"
+        },
+        "count": {
+          "type": "integer",
+          "description": "Total number of entries"
+        }
+      }
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "patch", "path"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Entity ID"
+          },
+          "patch": {
+            "type": "string",
+            "pattern": "^\\d+\\.\\d+$"
+          },
+          "path": {
+            "type": "string",
+            "description": "Relative path to entity file"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://arreatsummit.com/schemas/meta/udt.schema.json",
+  "title": "UDT - User Defined Type",
+  "description": "Defines a custom type in the D2R system",
+  "type": "object",
+  "required": ["name"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Type name"
+    },
+    "base": {
+      "type": ["string", "null"],
+      "description": "Parent type to inherit from"
+    },
+    "fields": {
+      "type": "array",
+      "description": "Type fields",
+      "items": {
+        "type": "object",
+        "required": ["name", "type"],
+        "properties": {
+          "name": { "type": "string" },
+          "type": { "type": "string" },
+          "unit": { "type": "string" },
+          "range": { "type": "string" },
+          "desc": { "type": "string" }
+        }
+      }
+    },
+    "computed": {
+      "type": "array",
+      "description": "Computed fields",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "expr": { "type": "string" }
+        }
+      }
+    },
+    "constraints": {
+      "type": "array",
+      "description": "Validation rules"
+    }
+  }
+}

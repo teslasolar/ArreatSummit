@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://arreatsummit.com/schemas/udt/layer2/unique.schema.json",
+  "title": "Unique UDT",
+  "description": "Unique item definition",
+  "type": "object",
+  "required": ["name", "slug", "base", "stats"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Unique item name"
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "base": {
+      "type": "string",
+      "description": "Base item type"
+    },
+    "tc": {
+      "type": "integer",
+      "description": "Treasure class"
+    },
+    "qlvl": {
+      "type": "integer",
+      "description": "Quality level"
+    },
+    "req": {
+      "$ref": "../layer1/req.schema.json"
+    },
+    "stats": {
+      "type": "array",
+      "items": { "$ref": "../layer1/stat.schema.json" }
+    },
+    "sockets": {
+      "type": ["integer", "null"],
+      "minimum": 0
+    }
+  }
+}

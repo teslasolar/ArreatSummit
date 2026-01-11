@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://arreatsummit.com/schemas/udt/layer1/req.schema.json",
+  "title": "Requirements UDT",
+  "description": "Item/skill requirements",
+  "type": "object",
+  "properties": {
+    "level": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 99,
+      "description": "Required character level"
+    },
+    "str": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Required strength"
+    },
+    "dex": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Required dexterity"
+    },
+    "class": {
+      "type": ["string", "null"],
+      "enum": [null, "amazon", "assassin", "barbarian", "druid", "necromancer", "paladin", "sorceress"],
+      "description": "Required class (null = any)"
+    }
+  }
+}

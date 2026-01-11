@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://arreatsummit.com/schemas/meta/entity.schema.json",
+  "title": "ENTITY - Entity Instance",
+  "description": "Self-contained entity with metadata and data",
+  "type": "object",
+  "required": ["meta", "data"],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri",
+      "description": "JSON Schema reference"
+    },
+    "meta": {
+      "type": "object",
+      "required": ["type", "udt", "id"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "ENTITY",
+          "description": "Always ENTITY"
+        },
+        "udt": {
+          "type": "string",
+          "description": "UDT type name"
+        },
+        "id": {
+          "type": "string",
+          "description": "Unique entity ID"
+        },
+        "patch": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+$",
+          "description": "Patch version (e.g., 2.4, 2.6)"
+        },
+        "created": {
+          "type": "string",
+          "format": "date",
+          "description": "Creation date"
+        },
+        "updated": {
+          "type": "string",
+          "format": "date",
+          "description": "Last update date"
+        }
+      }
+    },
+    "data": {
+      "type": "object",
+      "description": "Entity data conforming to UDT"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "db-sync",
+  "version": "1.0.0",
+  "description": "JSON <-> SQLite sync for D2R data",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "better-sqlite3": "^9.2.2"
+  }
+}

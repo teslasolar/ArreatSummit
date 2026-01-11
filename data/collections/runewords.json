@@ -1,0 +1,20 @@
+{
+  "$schema": "https://arreatsummit.com/schemas/composite/manifest.schema.json",
+  "meta": {
+    "type": "MANIFEST",
+    "collection": "runewords",
+    "count": 2
+  },
+  "entries": [
+    {
+      "id": "spirit",
+      "patch": "2.4",
+      "path": "patches/2.4/runewords/spirit.json"
+    },
+    {
+      "id": "insight",
+      "patch": "2.4",
+      "path": "patches/2.4/runewords/insight.json"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://arreatsummit.com/schemas/meta/template.schema.json",
+  "title": "TEMPLATE - 11ty Template Definition",
+  "description": "Defines how a UDT maps to an 11ty template",
+  "type": "object",
+  "required": ["name", "udt", "layout"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Template name"
+    },
+    "udt": {
+      "type": "string",
+      "description": "UDT type this template renders"
+    },
+    "layout": {
+      "type": "string",
+      "description": "11ty layout file path"
+    },
+    "collection": {
+      "type": "string",
+      "description": "11ty collection name"
+    },
+    "permalink": {
+      "type": "string",
+      "description": "URL pattern (e.g., /runewords/:slug/)"
+    }
+  }
+}

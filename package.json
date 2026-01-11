@@ -1,0 +1,30 @@
+{
+  "name": "arreat-summit",
+  "version": "2.0.0",
+  "description": "Self-defining D2R database with UDT architecture",
+  "main": "index.js",
+  "scripts": {
+    "validate": "node tools/alpha-parse/index.js validate --all",
+    "validate:schemas": "node tools/alpha-parse/index.js validate --schemas-only",
+    "validate:data": "node tools/alpha-parse/index.js validate --data-only",
+    "validate:refs": "node tools/alpha-parse/index.js validate --refs-only",
+    "build": "npm run validate && eleventy",
+    "dev": "eleventy --serve",
+    "test": "npm run validate && jest"
+  },
+  "keywords": ["d2r", "diablo2", "resurrected", "database", "udt"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "ajv": "^8.12.0",
+    "ajv-formats": "^2.1.1",
+    "alpinejs": "^3.13.3",
+    "autoprefixer": "^10.4.16",
+    "fast-json-patch": "^3.1.1",
+    "jest": "^29.7.0",
+    "lunr": "^2.3.9",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.4.0"
+  }
+}

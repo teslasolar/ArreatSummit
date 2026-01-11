@@ -1,0 +1,15 @@
+{
+  "$schema": "https://arreatsummit.com/schemas/composite/manifest.schema.json",
+  "meta": {
+    "type": "MANIFEST",
+    "collection": "uniques",
+    "count": 1
+  },
+  "entries": [
+    {
+      "id": "shako",
+      "patch": "2.4",
+      "path": "patches/2.4/uniques/shako.json"
+    }
+  ]
+}
