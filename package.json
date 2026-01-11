@@ -11,7 +11,8 @@
     "index": "node tools/index-gen/index.js scan data",
     "index:stats": "node tools/index-gen/index.js stats data",
     "index:dry": "node tools/index-gen/index.js scan data --dry-run",
-    "build": "npm run validate && eleventy",
+    "build:css": "npx tailwindcss -i ./src/assets/css/main.css -o ./_site/assets/css/main.css --minify",
+    "build": "npm run validate && eleventy && npm run build:css",
     "dev": "eleventy --serve",
     "test": "npm run validate && jest"
   },

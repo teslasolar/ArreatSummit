@@ -1,4 +1,6 @@
-@import url('https://cdn.jsdelivr.net/npm/tailwindcss@3.4.0/dist/tailwind.min.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* D2R Custom Styles */
 body {
