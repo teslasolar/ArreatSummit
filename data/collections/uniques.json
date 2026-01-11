@@ -3,14 +3,29 @@
   "meta": {
     "type": "MANIFEST",
     "collection": "uniques",
-    "count": 1,
+    "count": 4,
     "generated": "2026-01-11"
   },
   "entries": [
     {
+      "id": "arachnid",
+      "patch": "2.4",
+      "path": "patches/2.4/uniques/arachnid.json"
+    },
+    {
+      "id": "griffons",
+      "patch": "2.4",
+      "path": "patches/2.4/uniques/griffons.json"
+    },
+    {
       "id": "shako",
       "patch": "2.4",
       "path": "patches/2.4/uniques/shako.json"
+    },
+    {
+      "id": "soj",
+      "patch": "2.4",
+      "path": "patches/2.4/uniques/soj.json"
     }
   ]
 }

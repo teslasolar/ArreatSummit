@@ -6,20 +6,63 @@
   <title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ description or site.description }}">
   <link rel="stylesheet" href="/assets/css/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="/assets/js/search.js"></script>
 </head>
 <body class="bg-gray-900 text-gray-100">
   <header class="bg-gray-800 border-b border-yellow-600">
     <nav class="container mx-auto px-4 py-4">
       <div class="flex items-center justify-between">
         <a href="/" class="text-2xl font-bold text-yellow-400">⚔️ D2R Summit</a>
-        <div class="space-x-6">
+        <div class="flex items-center space-x-6">
           <a href="/runewords/" class="text-gray-300 hover:text-yellow-400">Runewords</a>
           <a href="/uniques/" class="text-gray-300 hover:text-yellow-400">Uniques</a>
+          <button
+            @click="$dispatch('open-search')"
+            class="text-gray-300 hover:text-yellow-400">
+            🔍 Search
+          </button>
         </div>
       </div>
     </nav>
   </header>
+
+  <!-- Search Modal -->
+  <div
+    x-data="search"
+    x-show="open"
+    @open-search.window="open = true"
+    @keydown.escape.window="open = false"
+    x-init="open = false"
+    style="display: none;"
+    class="fixed inset-0 z-50 overflow-y-auto"
+    x-cloak>
+    <div class="flex items-center justify-center min-h-screen px-4">
+      <div @click="open = false" class="fixed inset-0 bg-black opacity-75"></div>
+      <div class="relative bg-gray-800 rounded-lg max-w-2xl w-full p-6 border border-yellow-600">
+        <input
+          type="text"
+          x-model="query"
+          @input="search()"
+          placeholder="Search items..."
+          class="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded text-gray-100 focus:border-yellow-600 focus:outline-none"
+          autofocus>
+
+        <div class="mt-4 max-h-96 overflow-y-auto">
+          <template x-for="result in results" :key="result.id">
+            <a :href="result.url" class="block p-3 hover:bg-gray-700 rounded">
+              <div class="font-bold text-yellow-400" x-text="result.name"></div>
+              <div class="text-sm text-gray-400" x-text="result.type"></div>
+            </a>
+          </template>
+          <div x-show="query && results.length === 0" class="text-gray-400 text-center py-4">
+            No results found
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <main class="container mx-auto px-4 py-8">
     {{ content | safe }}

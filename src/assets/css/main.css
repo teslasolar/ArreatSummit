@@ -1,0 +1,17 @@
+@import url('https://cdn.jsdelivr.net/npm/tailwindcss@3.4.0/dist/tailwind.min.css');
+
+/* D2R Custom Styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* D2R item quality colors */
+.text-unique { color: #a59263; }
+.text-set { color: #00ff00; }
+.text-rare { color: #ffff00; }
+.text-magic { color: #4169e1; }
+.text-crafted { color: #ff8000; }
+
+/* Stat colors */
+.stat-positive { color: #88ccff; }
+.stat-negative { color: #ff6666; }

@@ -1,0 +1,67 @@
+{
+  "$schema": "https://arreatsummit.com/schemas/composite/runeword-full.schema.json",
+  "meta": {
+    "type": "ENTITY",
+    "udt": "Runeword",
+    "id": "grief",
+    "patch": "2.4",
+    "created": "2021-09-23",
+    "updated": "2021-09-23"
+  },
+  "data": {
+    "name": "Grief",
+    "slug": "grief",
+    "runes": ["Eth", "Tir", "Lo", "Mal", "Ral"],
+    "sockets": 5,
+    "types": ["Swords", "Axes"],
+    "req": {
+      "level": 59
+    },
+    "stats": [
+      {
+        "text": "To Enemy Poison Resistance",
+        "type": "flat",
+        "stat": "poison_res_enemy",
+        "value": { "min": -20, "max": -25, "varies": true },
+        "condition": null
+      },
+      {
+        "text": "Adds Damage",
+        "type": "flat",
+        "stat": "damage",
+        "value": { "min": 340, "max": 400, "varies": true },
+        "condition": null
+      },
+      {
+        "text": "Ignore Target's Defense",
+        "type": "flat",
+        "stat": "itd",
+        "value": 1,
+        "condition": null
+      },
+      {
+        "text": "Bonus to Attack Rating",
+        "type": "flat",
+        "stat": "ar",
+        "value": { "min": 30, "max": 40, "varies": true },
+        "condition": "Against Demons"
+      },
+      {
+        "text": "Increased Attack Speed",
+        "type": "pct",
+        "stat": "ias",
+        "value": { "min": 30, "max": 40, "varies": true },
+        "condition": null
+      },
+      {
+        "text": "Life Stolen Per Hit",
+        "type": "pct",
+        "stat": "ll",
+        "value": { "min": 12, "max": 15, "varies": true },
+        "condition": null
+      }
+    ],
+    "ladder": false,
+    "notes": "Highest DPS melee weapon runeword. Popular for Berserkers."
+  }
+}

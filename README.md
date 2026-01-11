@@ -153,15 +153,38 @@ node tools/index-gen/index.js scan data/patches/2.4
 node tools/index-gen/index.js stats data/patches/2.4
 ```
 
+## GitHub Pages Deployment 🚀
+
+The site is configured to auto-deploy to GitHub Pages on every push to `main`.
+
+### Build & Preview
+
+```bash
+# Build the site
+npm run build
+
+# Preview locally
+npm run dev
+# Visit http://localhost:8080
+```
+
+### Automatic Deployment
+
+1. Push code to `main` branch
+2. GitHub Actions validates all data
+3. Builds static site with 11ty
+4. Deploys to GitHub Pages automatically
+
+**Live Site**: https://teslasolar.github.io/ArreatSummit
+
 ## Next Steps
 
-Remaining phases from the implementation plan:
+Remaining enhancements:
 
-- **Phase 4**: Validation enhancement (cross-refs, completeness checking, patch merging)
-- **Phase 5**: 11ty integration (static site generation)
-- **Phase 6**: Search & styling (Lunr + Tailwind + Alpine)
-- **Phase 7**: Build guides (complete MVP)
-- **Phase 8**: GitHub Pages deployment
+- **Phase 4**: Validation enhancement (cross-refs, completeness checking)
+- **Phase 6**: Search functionality (Lunr integration)
+- **Phase 7**: Build guides database
+- **Data expansion**: Add more runewords, uniques, sets, gems, etc.
 
 ## Technology Stack
 

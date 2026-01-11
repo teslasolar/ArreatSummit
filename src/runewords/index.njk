@@ -7,10 +7,12 @@ title: Runewords
 
 <div class="grid gap-6">
   {% for rw in runewords %}
-  <div class="bg-gray-800 rounded-lg p-6 border border-yellow-600 hover:border-yellow-500 transition-colors">
+  <div id="{{ rw._id }}" class="bg-gray-800 rounded-lg p-6 border border-yellow-600 hover:border-yellow-500 transition-colors scroll-mt-20">
     <div class="flex justify-between items-start mb-4">
       <div>
-        <h2 class="text-2xl font-bold text-yellow-400">{{ rw.name }}</h2>
+        <h2 class="text-2xl font-bold text-yellow-400">
+          <a href="#{{ rw._id }}" class="hover:text-yellow-300">{{ rw.name }}</a>
+        </h2>
         <p class="text-gray-400">{{ rw.runes | runeList }}</p>
       </div>
       <span class="text-sm bg-gray-700 px-3 py-1 rounded">

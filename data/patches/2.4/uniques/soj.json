@@ -1,0 +1,52 @@
+{
+  "$schema": "https://arreatsummit.com/schemas/composite/unique-full.schema.json",
+  "meta": {
+    "type": "ENTITY",
+    "udt": "Unique",
+    "id": "soj",
+    "patch": "2.4",
+    "created": "2021-09-23",
+    "updated": "2021-09-23"
+  },
+  "data": {
+    "name": "Stone of Jordan",
+    "slug": "soj",
+    "base": "Ring",
+    "tc": 39,
+    "qlvl": 39,
+    "req": {
+      "level": 29
+    },
+    "stats": [
+      {
+        "text": "+1 To All Skills",
+        "type": "skill",
+        "stat": "all-skills",
+        "value": 1,
+        "condition": null
+      },
+      {
+        "text": "Increase Maximum Mana",
+        "type": "pct",
+        "stat": "mana_pct",
+        "value": 25,
+        "condition": null
+      },
+      {
+        "text": "Adds To Mana",
+        "type": "flat",
+        "stat": "mana",
+        "value": { "min": 1, "max": 12, "varies": false },
+        "condition": "Based on Character Level"
+      },
+      {
+        "text": "To Lightning Resistance",
+        "type": "flat",
+        "stat": "res_light",
+        "value": { "min": 20, "max": 20, "varies": false },
+        "condition": null
+      }
+    ],
+    "sockets": null
+  }
+}

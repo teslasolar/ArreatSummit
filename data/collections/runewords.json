@@ -3,10 +3,25 @@
   "meta": {
     "type": "MANIFEST",
     "collection": "runewords",
-    "count": 2,
+    "count": 5,
     "generated": "2026-01-11"
   },
   "entries": [
+    {
+      "id": "enigma",
+      "patch": "2.4",
+      "path": "patches/2.4/runewords/enigma.json"
+    },
+    {
+      "id": "grief",
+      "patch": "2.4",
+      "path": "patches/2.4/runewords/grief.json"
+    },
+    {
+      "id": "infinity",
+      "patch": "2.4",
+      "path": "patches/2.4/runewords/infinity.json"
+    },
     {
       "id": "insight",
       "patch": "2.4",

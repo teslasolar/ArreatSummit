@@ -1,0 +1,60 @@
+{
+  "$schema": "https://arreatsummit.com/schemas/composite/unique-full.schema.json",
+  "meta": {
+    "type": "ENTITY",
+    "udt": "Unique",
+    "id": "arachnid",
+    "patch": "2.4",
+    "created": "2021-09-23",
+    "updated": "2021-09-23"
+  },
+  "data": {
+    "name": "Arachnid Mesh",
+    "slug": "arachnid",
+    "base": "Spiderweb Sash",
+    "tc": 87,
+    "qlvl": 87,
+    "req": {
+      "level": 80,
+      "str": 50
+    },
+    "stats": [
+      {
+        "text": "+1 To All Skills",
+        "type": "skill",
+        "stat": "all-skills",
+        "value": 1,
+        "condition": null
+      },
+      {
+        "text": "Faster Cast Rate",
+        "type": "pct",
+        "stat": "fcr",
+        "value": 20,
+        "condition": null
+      },
+      {
+        "text": "Increase Maximum Mana",
+        "type": "pct",
+        "stat": "mana_pct",
+        "value": { "min": 5, "max": 5, "varies": false },
+        "condition": null
+      },
+      {
+        "text": "Slows Target By",
+        "type": "pct",
+        "stat": "slow",
+        "value": 10,
+        "condition": null
+      },
+      {
+        "text": "To Enemy Poison Resistance",
+        "type": "flat",
+        "stat": "poison_res_enemy",
+        "value": { "min": -3, "max": -5, "varies": true },
+        "condition": null
+      }
+    ],
+    "sockets": null
+  }
+}

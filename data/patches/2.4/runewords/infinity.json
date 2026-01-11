@@ -1,0 +1,67 @@
+{
+  "$schema": "https://arreatsummit.com/schemas/composite/runeword-full.schema.json",
+  "meta": {
+    "type": "ENTITY",
+    "udt": "Runeword",
+    "id": "infinity",
+    "patch": "2.4",
+    "created": "2021-09-23",
+    "updated": "2021-09-23"
+  },
+  "data": {
+    "name": "Infinity",
+    "slug": "infinity",
+    "runes": ["Ber", "Mal", "Ber", "Ist"],
+    "sockets": 4,
+    "types": ["Polearms", "Spears"],
+    "req": {
+      "level": 63
+    },
+    "stats": [
+      {
+        "text": "Level 12 Conviction Aura When Equipped",
+        "type": "aura",
+        "stat": "conviction",
+        "value": 12,
+        "condition": null
+      },
+      {
+        "text": "Chance To Cast Level 20 Chain Lightning On Striking",
+        "type": "proc",
+        "stat": "chain_lightning",
+        "value": 50,
+        "condition": null
+      },
+      {
+        "text": "Enhanced Damage",
+        "type": "pct",
+        "stat": "ed",
+        "value": { "min": 255, "max": 325, "varies": true },
+        "condition": null
+      },
+      {
+        "text": "Bonus to Attack Rating",
+        "type": "flat",
+        "stat": "ar",
+        "value": { "min": 40, "max": 40, "varies": false },
+        "condition": "Against Demons"
+      },
+      {
+        "text": "Prevent Monster Heal",
+        "type": "flat",
+        "stat": "pmh",
+        "value": 1,
+        "condition": null
+      },
+      {
+        "text": "To Vitality",
+        "type": "flat",
+        "stat": "vitality",
+        "value": { "min": 0, "max": 49, "varies": true },
+        "condition": "Based on Character Level"
+      }
+    ],
+    "ladder": false,
+    "notes": "Best mercenary weapon for lightning builds. Breaks immunities."
+  }
+}

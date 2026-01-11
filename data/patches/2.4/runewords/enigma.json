@@ -1,0 +1,74 @@
+{
+  "$schema": "https://arreatsummit.com/schemas/composite/runeword-full.schema.json",
+  "meta": {
+    "type": "ENTITY",
+    "udt": "Runeword",
+    "id": "enigma",
+    "patch": "2.4",
+    "created": "2021-09-23",
+    "updated": "2021-09-23"
+  },
+  "data": {
+    "name": "Enigma",
+    "slug": "enigma",
+    "runes": ["Jah", "Ith", "Ber"],
+    "sockets": 3,
+    "types": ["Body Armor"],
+    "req": {
+      "level": 65
+    },
+    "stats": [
+      {
+        "text": "+2 To All Skills",
+        "type": "skill",
+        "stat": "all-skills",
+        "value": 2,
+        "condition": null
+      },
+      {
+        "text": "Faster Run/Walk",
+        "type": "pct",
+        "stat": "frw",
+        "value": 45,
+        "condition": null
+      },
+      {
+        "text": "To Strength",
+        "type": "flat",
+        "stat": "str",
+        "value": { "min": 0, "max": 74, "varies": true },
+        "condition": "Based on Character Level"
+      },
+      {
+        "text": "Increase Maximum Life",
+        "type": "pct",
+        "stat": "life_pct",
+        "value": 5,
+        "condition": null
+      },
+      {
+        "text": "Damage Reduced By",
+        "type": "pct",
+        "stat": "dr",
+        "value": 8,
+        "condition": null
+      },
+      {
+        "text": "To Mana",
+        "type": "flat",
+        "stat": "mana",
+        "value": { "min": 0, "max": 74, "varies": true },
+        "condition": "Based on Character Level"
+      },
+      {
+        "text": "Magic Find",
+        "type": "pct",
+        "stat": "mf",
+        "value": { "min": 14, "max": 14, "varies": false },
+        "condition": null
+      }
+    ],
+    "ladder": false,
+    "notes": "Most expensive and sought-after armor runeword. Provides Teleport oskill."
+  }
+}
