@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ description or site.description }}">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-gray-900 text-gray-100">
+  <header class="bg-gray-800 border-b border-yellow-600">
+    <nav class="container mx-auto px-4 py-4">
+      <div class="flex items-center justify-between">
+        <a href="/" class="text-2xl font-bold text-yellow-400">⚔️ D2R Summit</a>
+        <div class="space-x-6">
+          <a href="/runewords/" class="text-gray-300 hover:text-yellow-400">Runewords</a>
+          <a href="/uniques/" class="text-gray-300 hover:text-yellow-400">Uniques</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container mx-auto px-4 py-8">
+    {{ content | safe }}
+  </main>
+
+  <footer class="bg-gray-800 border-t border-gray-700 mt-16">
+    <div class="container mx-auto px-4 py-6 text-center text-gray-400 text-sm">
+      <p>D2R Summit v2.0.0 | Self-Defining Database | Built {{ site.buildTime.toISOString().split('T')[0] }}</p>
+      <p class="mt-2">Stay awhile and listen! 🗡️</p>
+    </div>
+  </footer>
+</body>
+</html>

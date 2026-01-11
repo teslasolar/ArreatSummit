@@ -5,6 +5,6 @@
   "main": "index.js",
   "type": "module",
   "dependencies": {
-    "better-sqlite3": "^9.2.2"
+    "sql.js": "^1.10.3"
   }
 }

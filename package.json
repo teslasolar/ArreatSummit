@@ -8,6 +8,9 @@
     "validate:schemas": "node tools/alpha-parse/index.js validate --schemas-only",
     "validate:data": "node tools/alpha-parse/index.js validate --data-only",
     "validate:refs": "node tools/alpha-parse/index.js validate --refs-only",
+    "index": "node tools/index-gen/index.js scan data",
+    "index:stats": "node tools/index-gen/index.js stats data",
+    "index:dry": "node tools/index-gen/index.js scan data --dry-run",
     "build": "npm run validate && eleventy",
     "dev": "eleventy --serve",
     "test": "npm run validate && jest"

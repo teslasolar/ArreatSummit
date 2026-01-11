@@ -1,0 +1,40 @@
+---
+layout: layouts/base.njk
+title: Home
+---
+
+<div class="text-center mb-12">
+  <h1 class="text-5xl font-bold text-yellow-400 mb-4">D2R Summit v2.0</h1>
+  <p class="text-xl text-gray-300">Self-Defining Diablo 2 Resurrected Database</p>
+  <p class="text-gray-400 mt-2">Built with UDT architecture, 11ty, and Tailwind</p>
+</div>
+
+<div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+  <div class="bg-gray-800 rounded-lg p-6 border border-yellow-600">
+    <h2 class="text-2xl font-bold text-yellow-400 mb-4">⚡ Runewords</h2>
+    <p class="text-gray-300 mb-4">Browse all D2R runewords with stats, requirements, and patch information.</p>
+    <p class="text-sm text-gray-400 mb-4">{{ runewords.length }} runewords available</p>
+    <a href="/runewords/" class="inline-block bg-yellow-600 hover:bg-yellow-500 text-gray-900 font-bold py-2 px-4 rounded">
+      Browse Runewords →
+    </a>
+  </div>
+
+  <div class="bg-gray-800 rounded-lg p-6 border border-blue-600">
+    <h2 class="text-2xl font-bold text-blue-400 mb-4">🛡️ Unique Items</h2>
+    <p class="text-gray-300 mb-4">Explore unique items with detailed stats and drop information.</p>
+    <p class="text-sm text-gray-400 mb-4">{{ uniques.length }} unique items available</p>
+    <a href="/uniques/" class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded">
+      Browse Uniques →
+    </a>
+  </div>
+</div>
+
+<div class="mt-16 max-w-4xl mx-auto bg-gray-800 rounded-lg p-6 border border-gray-700">
+  <h2 class="text-2xl font-bold text-gray-100 mb-4">About This Database</h2>
+  <ul class="space-y-2 text-gray-300">
+    <li>✅ <strong>Schema-first validation</strong> - All data validates before build</li>
+    <li>✅ <strong>Modular architecture</strong> - Sub-250 token files</li>
+    <li>✅ <strong>Patch-aware</strong> - Track changes across D2R patches</li>
+    <li>✅ <strong>Self-defining UDT system</strong> - Data carries its own schema</li>
+  </ul>
+</div>

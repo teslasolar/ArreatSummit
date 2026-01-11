@@ -136,6 +136,23 @@ node tools/alpha-parse/index.js validate --data-only
 node tools/alpha-parse/index.js validate --all
 ```
 
+### Auto-Generate Collection Manifests
+
+```bash
+# Generate manifests for all entities
+npm run index
+
+# Show statistics
+npm run index:stats
+
+# Dry run (preview changes)
+npm run index:dry
+
+# Parameterize to specific directory
+node tools/index-gen/index.js scan data/patches/2.4
+node tools/index-gen/index.js stats data/patches/2.4
+```
+
 ## Next Steps
 
 Remaining phases from the implementation plan:

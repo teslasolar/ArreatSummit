@@ -1,0 +1,13 @@
+{
+  "name": "index-gen",
+  "version": "1.0.0",
+  "description": "Auto-generate collection manifests by scanning directories",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "index-gen": "./index.js"
+  },
+  "keywords": ["indexing", "manifest", "generator"],
+  "author": "",
+  "license": "MIT"
+}

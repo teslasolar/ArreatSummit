@@ -1,0 +1,52 @@
+---
+layout: layouts/base.njk
+title: Runewords
+---
+
+<h1 class="text-4xl font-bold text-yellow-400 mb-8">Runewords</h1>
+
+<div class="grid gap-6">
+  {% for rw in runewords %}
+  <div class="bg-gray-800 rounded-lg p-6 border border-yellow-600 hover:border-yellow-500 transition-colors">
+    <div class="flex justify-between items-start mb-4">
+      <div>
+        <h2 class="text-2xl font-bold text-yellow-400">{{ rw.name }}</h2>
+        <p class="text-gray-400">{{ rw.runes | runeList }}</p>
+      </div>
+      <span class="text-sm bg-gray-700 px-3 py-1 rounded">
+        {{ rw.sockets }} sockets
+      </span>
+    </div>
+
+    <div class="mb-4">
+      <p class="text-sm text-gray-400">
+        <strong>Types:</strong> {{ rw.types | join(", ") }}
+      </p>
+      {% if rw.req and rw.req.level %}
+      <p class="text-sm text-gray-400">
+        <strong>Required Level:</strong> {{ rw.req.level }}
+      </p>
+      {% endif %}
+      {% if rw.ladder %}
+      <p class="text-sm text-yellow-500">
+        ⚠️ Ladder Only
+      </p>
+      {% endif %}
+    </div>
+
+    <div class="space-y-1">
+      {% for stat in rw.stats %}
+      <div class="text-blue-300">
+        {{ stat.text }}: {{ stat | statValue }}
+      </div>
+      {% endfor %}
+    </div>
+
+    {% if rw.notes %}
+    <p class="mt-4 text-sm text-gray-500 italic">{{ rw.notes }}</p>
+    {% endif %}
+
+    <p class="mt-4 text-xs text-gray-600">Patch {{ rw._meta.patch }}</p>
+  </div>
+  {% endfor %}
+</div>
