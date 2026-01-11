@@ -5,19 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ description or site.description }}">
-  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}">
   <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <script defer src="/assets/js/search.js"></script>
+  <script defer src="{{ '/assets/js/search.js' | url }}"></script>
 </head>
 <body class="bg-gray-900 text-gray-100">
   <header class="bg-gray-800 border-b border-yellow-600">
     <nav class="container mx-auto px-4 py-4">
       <div class="flex items-center justify-between">
-        <a href="/" class="text-2xl font-bold text-yellow-400">⚔️ D2R Summit</a>
+        <a href="{{ '/' | url }}" class="text-2xl font-bold text-yellow-400">⚔️ D2R Summit</a>
         <div class="flex items-center space-x-6">
-          <a href="/runewords/" class="text-gray-300 hover:text-yellow-400">Runewords</a>
-          <a href="/uniques/" class="text-gray-300 hover:text-yellow-400">Uniques</a>
+          <a href="{{ '/runewords/' | url }}" class="text-gray-300 hover:text-yellow-400">Runewords</a>
+          <a href="{{ '/uniques/' | url }}" class="text-gray-300 hover:text-yellow-400">Uniques</a>
           <button
             @click="$dispatch('open-search')"
             class="text-gray-300 hover:text-yellow-400">
