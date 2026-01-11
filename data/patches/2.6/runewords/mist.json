@@ -1,0 +1,52 @@
+{
+  "$schema": "https://arreatsummit.com/schemas/composite/runeword-full.schema.json",
+  "meta": {
+    "type": "ENTITY",
+    "udt": "Runeword",
+    "id": "mist",
+    "patch": "2.6",
+    "created": "2023-02-15"
+  },
+  "data": {
+    "name": "Mist",
+    "slug": "mist",
+    "runes": ["Cham", "Shael", "Gul", "Thul", "Ith"],
+    "sockets": 5,
+    "types": ["Missile Weapons"],
+    "req": {
+      "level": 67
+    },
+    "stats": [
+      {
+        "text": "Level 8-12 Concentration Aura When Equipped",
+        "type": "aura",
+        "stat": "concentration",
+        "value": { "min": 8, "max": 12, "varies": true },
+        "condition": null
+      },
+      {
+        "text": "To All Skills",
+        "type": "skill",
+        "stat": "all-skills",
+        "value": 3,
+        "condition": null
+      },
+      {
+        "text": "Increased Attack Speed",
+        "type": "pct",
+        "stat": "ias",
+        "value": 20,
+        "condition": null
+      },
+      {
+        "text": "Piercing Attack",
+        "type": "pct",
+        "stat": "pierce",
+        "value": 100,
+        "condition": null
+      }
+    ],
+    "ladder": true,
+    "notes": "BiS Act 1 merc bow. Provides Concentration aura for physical builds. Patch 2.6 ladder-only."
+  }
+}

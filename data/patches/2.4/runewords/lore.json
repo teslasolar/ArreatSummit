@@ -1,0 +1,52 @@
+{
+  "$schema": "https://arreatsummit.com/schemas/composite/runeword-full.schema.json",
+  "meta": {
+    "type": "ENTITY",
+    "udt": "Runeword",
+    "id": "lore",
+    "patch": "2.4",
+    "created": "2021-09-23"
+  },
+  "data": {
+    "name": "Lore",
+    "slug": "lore",
+    "runes": ["Ort", "Sol"],
+    "sockets": 2,
+    "types": ["Helms"],
+    "req": {
+      "level": 27
+    },
+    "stats": [
+      {
+        "text": "To All Skills",
+        "type": "skill",
+        "stat": "all-skills",
+        "value": 1,
+        "condition": null
+      },
+      {
+        "text": "To Energy",
+        "type": "flat",
+        "stat": "energy",
+        "value": 10,
+        "condition": null
+      },
+      {
+        "text": "Lightning Resistance",
+        "type": "flat",
+        "stat": "res_light",
+        "value": 30,
+        "condition": null
+      },
+      {
+        "text": "To Mana",
+        "type": "flat",
+        "stat": "mana",
+        "value": { "min": 2, "max": 2, "varies": false },
+        "condition": "Per Character Level"
+      }
+    ],
+    "ladder": false,
+    "notes": "Best starter helm for casters. Very cheap to make."
+  }
+}

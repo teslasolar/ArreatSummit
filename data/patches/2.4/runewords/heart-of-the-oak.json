@@ -1,0 +1,59 @@
+{
+  "$schema": "https://arreatsummit.com/schemas/composite/runeword-full.schema.json",
+  "meta": {
+    "type": "ENTITY",
+    "udt": "Runeword",
+    "id": "heart-of-the-oak",
+    "patch": "2.4",
+    "created": "2021-09-23"
+  },
+  "data": {
+    "name": "Heart of the Oak",
+    "slug": "heart-of-the-oak",
+    "runes": ["Ko", "Vex", "Pul", "Thul"],
+    "sockets": 4,
+    "types": ["Staves", "Maces"],
+    "req": {
+      "level": 55
+    },
+    "stats": [
+      {
+        "text": "To All Skills",
+        "type": "skill",
+        "stat": "all-skills",
+        "value": 3,
+        "condition": null
+      },
+      {
+        "text": "Faster Cast Rate",
+        "type": "pct",
+        "stat": "fcr",
+        "value": 40,
+        "condition": null
+      },
+      {
+        "text": "To Maximum Mana",
+        "type": "pct",
+        "stat": "mana_pct",
+        "value": { "min": 15, "max": 15, "varies": false },
+        "condition": null
+      },
+      {
+        "text": "All Resistances",
+        "type": "flat",
+        "stat": "res_all",
+        "value": { "min": 30, "max": 40, "varies": true },
+        "condition": null
+      },
+      {
+        "text": "To Dexterity",
+        "type": "flat",
+        "stat": "dex",
+        "value": { "min": 3, "max": 14, "varies": true },
+        "condition": "Based on Character Level"
+      }
+    ],
+    "ladder": false,
+    "notes": "BiS caster weapon. Usually made in flail for lowest requirements."
+  }
+}

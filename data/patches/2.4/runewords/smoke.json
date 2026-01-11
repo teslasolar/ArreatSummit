@@ -1,0 +1,45 @@
+{
+  "$schema": "https://arreatsummit.com/schemas/composite/runeword-full.schema.json",
+  "meta": {
+    "type": "ENTITY",
+    "udt": "Runeword",
+    "id": "smoke",
+    "patch": "2.4",
+    "created": "2021-09-23"
+  },
+  "data": {
+    "name": "Smoke",
+    "slug": "smoke",
+    "runes": ["Nef", "Lum"],
+    "sockets": 2,
+    "types": ["Body Armor"],
+    "req": {
+      "level": 37
+    },
+    "stats": [
+      {
+        "text": "Enhanced Defense",
+        "type": "pct",
+        "stat": "def",
+        "value": 75,
+        "condition": null
+      },
+      {
+        "text": "All Resistances",
+        "type": "flat",
+        "stat": "res_all",
+        "value": 50,
+        "condition": null
+      },
+      {
+        "text": "Defense vs Missile",
+        "type": "flat",
+        "stat": "def_missile",
+        "value": 280,
+        "condition": null
+      }
+    ],
+    "ladder": false,
+    "notes": "Best budget armor. Great resistances for early game."
+  }
+}

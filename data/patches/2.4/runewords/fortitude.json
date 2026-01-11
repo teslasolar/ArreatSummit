@@ -1,0 +1,59 @@
+{
+  "$schema": "https://arreatsummit.com/schemas/composite/runeword-full.schema.json",
+  "meta": {
+    "type": "ENTITY",
+    "udt": "Runeword",
+    "id": "fortitude",
+    "patch": "2.4",
+    "created": "2021-09-23"
+  },
+  "data": {
+    "name": "Fortitude",
+    "slug": "fortitude",
+    "runes": ["El", "Sol", "Dol", "Lo"],
+    "sockets": 4,
+    "types": ["Weapons", "Body Armor"],
+    "req": {
+      "level": 59
+    },
+    "stats": [
+      {
+        "text": "Enhanced Damage",
+        "type": "pct",
+        "stat": "ed",
+        "value": { "min": 200, "max": 300, "varies": true },
+        "condition": "Weapon"
+      },
+      {
+        "text": "Enhanced Defense",
+        "type": "pct",
+        "stat": "def",
+        "value": { "min": 200, "max": 300, "varies": true },
+        "condition": "Armor"
+      },
+      {
+        "text": "To Life",
+        "type": "flat",
+        "stat": "life",
+        "value": { "min": 1, "max": 1.5, "varies": false },
+        "condition": "Per Character Level"
+      },
+      {
+        "text": "All Resistances",
+        "type": "flat",
+        "stat": "res_all",
+        "value": { "min": 25, "max": 30, "varies": true },
+        "condition": null
+      },
+      {
+        "text": "Replenish Life",
+        "type": "flat",
+        "stat": "life_regen",
+        "value": 7,
+        "condition": null
+      }
+    ],
+    "ladder": false,
+    "notes": "BiS mercenary armor. Also great for melee builds."
+  }
+}

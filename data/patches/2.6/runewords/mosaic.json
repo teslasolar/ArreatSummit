@@ -1,0 +1,60 @@
+{
+  "$schema": "https://arreatsummit.com/schemas/composite/runeword-full.schema.json",
+  "meta": {
+    "type": "ENTITY",
+    "udt": "Runeword",
+    "id": "mosaic",
+    "patch": "2.6",
+    "created": "2023-02-15"
+  },
+  "data": {
+    "name": "Mosaic",
+    "slug": "mosaic",
+    "runes": ["Mal", "Gul", "Amn"],
+    "sockets": 3,
+    "types": ["Claws"],
+    "req": {
+      "level": 53,
+      "class": "assassin"
+    },
+    "stats": [
+      {
+        "text": "Chance to not consume charges",
+        "type": "pct",
+        "stat": "charge_save",
+        "value": 50,
+        "condition": null
+      },
+      {
+        "text": "To Martial Arts",
+        "type": "skill",
+        "stat": "skill_ma",
+        "value": 2,
+        "condition": null
+      },
+      {
+        "text": "Increased Attack Speed",
+        "type": "pct",
+        "stat": "ias",
+        "value": 20,
+        "condition": null
+      },
+      {
+        "text": "Enhanced Damage",
+        "type": "pct",
+        "stat": "ed",
+        "value": { "min": 200, "max": 250, "varies": true },
+        "condition": null
+      },
+      {
+        "text": "To Elemental Skill Damage",
+        "type": "pct",
+        "stat": "elem_dmg",
+        "value": { "min": 8, "max": 15, "varies": true },
+        "condition": null
+      }
+    ],
+    "ladder": true,
+    "notes": "Meta martial arts assassin runeword. Requires dual-wielding. Patch 2.6 ladder-only."
+  }
+}

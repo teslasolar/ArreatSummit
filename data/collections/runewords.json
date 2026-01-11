@@ -3,19 +3,39 @@
   "meta": {
     "type": "MANIFEST",
     "collection": "runewords",
-    "count": 5,
+    "count": 13,
     "generated": "2026-01-11"
   },
   "entries": [
+    {
+      "id": "call-to-arms",
+      "patch": "2.4",
+      "path": "patches/2.4/runewords/call-to-arms.json"
+    },
+    {
+      "id": "chains-of-honor",
+      "patch": "2.4",
+      "path": "patches/2.4/runewords/chains-of-honor.json"
+    },
     {
       "id": "enigma",
       "patch": "2.4",
       "path": "patches/2.4/runewords/enigma.json"
     },
     {
+      "id": "fortitude",
+      "patch": "2.4",
+      "path": "patches/2.4/runewords/fortitude.json"
+    },
+    {
       "id": "grief",
       "patch": "2.4",
       "path": "patches/2.4/runewords/grief.json"
+    },
+    {
+      "id": "heart-of-the-oak",
+      "patch": "2.4",
+      "path": "patches/2.4/runewords/heart-of-the-oak.json"
     },
     {
       "id": "infinity",
@@ -28,9 +48,39 @@
       "path": "patches/2.4/runewords/insight.json"
     },
     {
+      "id": "lore",
+      "patch": "2.4",
+      "path": "patches/2.4/runewords/lore.json"
+    },
+    {
+      "id": "smoke",
+      "patch": "2.4",
+      "path": "patches/2.4/runewords/smoke.json"
+    },
+    {
       "id": "spirit",
       "patch": "2.4",
       "path": "patches/2.4/runewords/spirit.json"
+    },
+    {
+      "id": "stealth",
+      "patch": "2.4",
+      "path": "patches/2.4/runewords/stealth.json"
+    },
+    {
+      "id": "treachery",
+      "patch": "2.4",
+      "path": "patches/2.4/runewords/treachery.json"
+    },
+    {
+      "id": "mist",
+      "patch": "2.6",
+      "path": "patches/2.6/runewords/mist.json"
+    },
+    {
+      "id": "mosaic",
+      "patch": "2.6",
+      "path": "patches/2.6/runewords/mosaic.json"
     }
   ]
 }

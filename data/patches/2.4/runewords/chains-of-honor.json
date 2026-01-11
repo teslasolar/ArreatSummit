@@ -1,0 +1,59 @@
+{
+  "$schema": "https://arreatsummit.com/schemas/composite/runeword-full.schema.json",
+  "meta": {
+    "type": "ENTITY",
+    "udt": "Runeword",
+    "id": "chains-of-honor",
+    "patch": "2.4",
+    "created": "2021-09-23"
+  },
+  "data": {
+    "name": "Chains of Honor",
+    "slug": "chains-of-honor",
+    "runes": ["Dol", "Um", "Ber", "Ist"],
+    "sockets": 4,
+    "types": ["Body Armor"],
+    "req": {
+      "level": 63
+    },
+    "stats": [
+      {
+        "text": "To All Skills",
+        "type": "skill",
+        "stat": "all-skills",
+        "value": 2,
+        "condition": null
+      },
+      {
+        "text": "To Strength",
+        "type": "flat",
+        "stat": "str",
+        "value": { "min": 0, "max": 70, "varies": true },
+        "condition": "Based on Character Level"
+      },
+      {
+        "text": "Damage Reduced By",
+        "type": "pct",
+        "stat": "dr",
+        "value": 8,
+        "condition": null
+      },
+      {
+        "text": "All Resistances",
+        "type": "flat",
+        "stat": "res_all",
+        "value": 65,
+        "condition": null
+      },
+      {
+        "text": "Magic Find",
+        "type": "pct",
+        "stat": "mf",
+        "value": 25,
+        "condition": null
+      }
+    ],
+    "ladder": false,
+    "notes": "Great all-around armor. Better resistances than Enigma but no teleport."
+  }
+}

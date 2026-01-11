@@ -1,0 +1,59 @@
+{
+  "$schema": "https://arreatsummit.com/schemas/composite/runeword-full.schema.json",
+  "meta": {
+    "type": "ENTITY",
+    "udt": "Runeword",
+    "id": "call-to-arms",
+    "patch": "2.4",
+    "created": "2021-09-23"
+  },
+  "data": {
+    "name": "Call to Arms",
+    "slug": "call-to-arms",
+    "runes": ["Amn", "Ral", "Mal", "Ist", "Ohm"],
+    "sockets": 5,
+    "types": ["Weapons"],
+    "req": {
+      "level": 57
+    },
+    "stats": [
+      {
+        "text": "To All Skills",
+        "type": "skill",
+        "stat": "all-skills",
+        "value": 1,
+        "condition": null
+      },
+      {
+        "text": "To Battle Command",
+        "type": "skill",
+        "stat": "battle_command",
+        "value": { "min": 2, "max": 6, "varies": true },
+        "condition": null
+      },
+      {
+        "text": "To Battle Orders",
+        "type": "skill",
+        "stat": "battle_orders",
+        "value": { "min": 1, "max": 6, "varies": true },
+        "condition": null
+      },
+      {
+        "text": "To Battle Cry",
+        "type": "skill",
+        "stat": "battle_cry",
+        "value": { "min": 1, "max": 4, "varies": true },
+        "condition": null
+      },
+      {
+        "text": "Replenish Life",
+        "type": "flat",
+        "stat": "life_regen",
+        "value": 12,
+        "condition": null
+      }
+    ],
+    "ladder": false,
+    "notes": "Essential prebuff weapon for Battle Orders. Usually made in 5os crystal sword/flail."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://arreatsummit.com/schemas/composite/runeword-full.schema.json",
+  "meta": {
+    "type": "ENTITY",
+    "udt": "Runeword",
+    "id": "stealth",
+    "patch": "2.4",
+    "created": "2021-09-23"
+  },
+  "data": {
+    "name": "Stealth",
+    "slug": "stealth",
+    "runes": ["Tal", "Eth"],
+    "sockets": 2,
+    "types": ["Body Armor"],
+    "req": {
+      "level": 17
+    },
+    "stats": [
+      {
+        "text": "Faster Run/Walk",
+        "type": "pct",
+        "stat": "frw",
+        "value": 25,
+        "condition": null
+      },
+      {
+        "text": "Faster Cast Rate",
+        "type": "pct",
+        "stat": "fcr",
+        "value": 25,
+        "condition": null
+      },
+      {
+        "text": "Faster Hit Recovery",
+        "type": "pct",
+        "stat": "fhr",
+        "value": 25,
+        "condition": null
+      },
+      {
+        "text": "To Dexterity",
+        "type": "flat",
+        "stat": "dex",
+        "value": 6,
+        "condition": null
+      }
+    ],
+    "ladder": false,
+    "notes": "Best starter caster armor. Very easy to make."
+  }
+}
